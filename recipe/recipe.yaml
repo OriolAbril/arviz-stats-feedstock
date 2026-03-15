@@ -50,9 +50,7 @@ outputs:
         - flit-core >=3.4,<4
         - pip
       run:
-        - python >=${{ python_min }}
-        - numpy >=2
-        - scipy >=1.13
+        - ${{ pin_subpackage("arviz-stats-core", exact=True) }}
         - arviz-base >=1.0.0,<1.1.0
         - xarray-einstats
         - xarray >=2024.11.0
